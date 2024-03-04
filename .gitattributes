@@ -1,0 +1,9 @@
+version https://git-lfs.github.com/spec/v1
+oid sha256:26c63271d3d99dcaa39ad962d0689f19ac7cbe99328dd42a5cd484667d06ff57
+size 141
+*.md !text !filter !merge !diff
+*.dll !text !filter !merge !diff
+*.png !text !filter !merge !diff
+*.gitattributes !text !filter !merge !diff
+*.gif !text !filter !merge !diff
+*.npy !text !filter !merge !diff
