@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public float health;
     public float maxHealth;
+    public int exp;
     public Rigidbody2D target;
 
     bool isLive;
@@ -67,6 +68,16 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        exp = data.exp;
+    }
+
+    public void BossInit(SpawnData data)
+    {
+        anim.runtimeAnimatorController = animCon[data.spriteType];
+        speed = data.speed + 1;
+        maxHealth = data.health * 10;
+        health = data.health * 10;
+        exp = data.exp * 5;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -89,7 +100,7 @@ public class Enemy : MonoBehaviour
             sprite.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            GameManager.instance.GetExp(exp);
 
             if(GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);

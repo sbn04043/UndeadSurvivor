@@ -1429,9 +1429,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 7636333340872519633, guid: b4dd61aec9adf1e4e9bcf3ae04a545f5, type: 3}
+  - {fileID: 7636333340872519633, guid: 8d7bea90d1f505041a334f45f2db5b43, type: 3}
   - {fileID: 7215897838022733126, guid: fcc0ec601cab39844832e1016f5b0f77, type: 3}
   - {fileID: 3656262301588881151, guid: 30d6db9bd6e85f94384a0277ed0883d2, type: 3}
+  - {fileID: 7636333340872519633, guid: b4dd61aec9adf1e4e9bcf3ae04a545f5, type: 3}
 --- !u!1 &206664902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,7 +2252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTime: 0
-  maxGameTime: 20
+  maxGameTime: 600
   isLive: 1
   playerId: 0
   health: 0
@@ -2259,7 +2260,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 01000000020000000300000004000000050000001801000068010000c201000058020000
+  nextExp: 03000000050000000a00000014000000280000003c0000005a00000096000000d2000000
   pool: {fileID: 183871265}
   player: {fileID: 425460735}
   uiLevelUp: {fileID: 2977037}
@@ -3374,43 +3375,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 539301402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 735731899}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 871650374}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 337117651}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameStart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &539301402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22589,10 +22554,23 @@ MonoBehaviour:
     spawnTime: 1
     health: 10
     speed: 1.5
+    exp: 1
   - spriteType: 1
     spawnTime: 0.5
-    health: 15
+    health: 50
     speed: 2.5
+    exp: 3
+  - spriteType: 2
+    spawnTime: 0.25
+    health: 200
+    speed: 2.5
+    exp: 7
+  - spriteType: 3
+    spawnTime: 0.1
+    health: 500
+    speed: 2.5
+    exp: 12
+  levelTime: 0
 --- !u!1 &1717047192
 GameObject:
   m_ObjectHideFlags: 0
@@ -23202,43 +23180,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1794264423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 735731899}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 871650374}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 337117651}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameStart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1794264423
 MonoBehaviour:
   m_ObjectHideFlags: 0

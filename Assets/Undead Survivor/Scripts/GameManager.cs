@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("# Game Control")]
     public float gameTime;
-    public float maxGameTime = 2 * 10f;
+    public float maxGameTime = 600f;
     public bool isLive;
 
     [Header("# Player Info")]
@@ -103,10 +103,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void GetExp()
+    public void GetExp(int _exp)
     {
         if (!isLive) return;
-        exp++;
+        exp += _exp;
 
         if (exp >= nextExp[Mathf.Min(level, nextExp.Length - 1)])
         {
